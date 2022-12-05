@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    
+  
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: grid;
+    place-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 13vw;
+    color: floralwhite
+
+}
+.wrapper section:nth-child(1) {
+    background-image: url(./resources/lofi_BG/outspace.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center;
+
+
+}
+
+.wrapper section:nth-child(2) {
+    background-image: url(./resources/lofi_BG/guyOnBeachBG.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center;
+
+}
+
+.wrapper section:nth-child(3) {
+    background-image: url(./resources/lofi_BG/lifeOFPie.svg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+
+.wrapper section:nth-child(4) {
+    background-image: url(./resources/lofi_BG/cityView.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+
+
+.wrapper section:nth-child(5) {
+    background-image: url(./resources/lofi_BG/lofi2\ \(1\).png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center;
+}
