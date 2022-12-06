@@ -1,6 +1,7 @@
 <!DOCTYPE html>
     <head>
         <meta name = "viewport" content="width = device-width, initial-scale = 1.0"/>
+        <script src="https://unpkg.com/force-graph"></script>
         <title> Aatman Rangrej</title>
         
         <!--Google Fonts-->
@@ -13,7 +14,39 @@
     
      <body>
         <div class = "wrapper">
-            <section> Section 1 </section>
+            <section>
+                <div class = "landing-title"> Aatman Rangrej  </div> 
+
+                <div id="landing-graph"> </div>
+                   
+                    <script>
+                        // Random tree
+                        const NODES = 300;
+                        const GROUPS = 12;
+                        const gData = {
+                          nodes: [...Array(NODES).keys()].map(i => ({
+                            id: i,
+                            group: Math.ceil(Math.random() * GROUPS)
+                          })),
+                          links: [...Array(NODES).keys()]
+                            .filter(id => id)
+                            .map(id => ({
+                              source: id,
+                              target: Math.round(Math.random() * (id-1))
+                            }))
+                        }
+                    
+                        const Graph = ForceGraph()
+                          (document.getElementById('landing-graph'))
+                            .nodeAutoColorBy('group')
+                            .linkAutoColorBy(d => gData.nodes[d.source].group)
+                            .graphData(gData);
+                      </script>
+                
+      
+            
+            
+            </section>
             <section> Section 2 </section>
             <section> Section 3 </section>
             <section> Section 4 </section>
