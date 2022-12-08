@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <head>
         <meta name = "viewport" content="width = device-width, initial-scale = 1.0"/>
-        <script src="https://unpkg.com/force-graph"></script>
+        <script src="https://unpkg.com/force-graph"> </script>
         <title> Aatman Rangrej</title>
         
         <!--Google Fonts-->
@@ -14,35 +14,69 @@
     
      <body>
         <div class = "wrapper">
-            <section>
-                <div class = "landing-title"> Aatman Rangrej  </div> 
 
-                <div id="landing-graph"> </div>
-                   
-                    <script>
-                        // Random tree
-                        const NODES = 300;
-                        const GROUPS = 12;
-                        const gData = {
-                          nodes: [...Array(NODES).keys()].map(i => ({
-                            id: i,
-                            group: Math.ceil(Math.random() * GROUPS)
-                          })),
-                          links: [...Array(NODES).keys()]
-                            .filter(id => id)
-                            .map(id => ({
-                              source: id,
-                              target: Math.round(Math.random() * (id-1))
-                            }))
-                        }
+            <section>
+              <nav-header class = "MenuContainer">
+                <input class="HiddenCheckbox" id="menu" type="checkbox" name="menu"/>
+                    <label class="MenuIcon" for="menu"></label>
+                    <h2 class="MenuHeader">Profile Menu</h2>
+                    <nav class="Menu">
+                      <ul class="Menu-list">
+                        <li class="Menu-item"><a class="Menu-link" href="" >About</a></li>
+                        <li class="Menu-item"><a class="Menu-link" href="" >Experience</a></li>
+                        <li class="Menu-item"><a class="Menu-link" href="">Research</a></li>
+                        <li class="Menu-item"><a class="Menu-link" href="">Education</a></li>
+                        <li class="Menu-item"><a class="Menu-link" href="">Projects</a></li>
+                      </ul>
+                    </nav>
+              </nav-header>
+              
+              
+              <landing-nav>  
+                    <nav>
+                      <ul>
+                        <li><a href=""> About </a></li>
+                        <li><a href=""> Experience</a> </li>
+                        <li><a href=""> Research </a></li>
+                        <li><a href=""> Education </a></li>
+                        <li><a href=""> Projects </a></li>  
+                      </ul>
+
+                    </nav>
+                    <img src = "resources/landing_page/menu.png" id = "nav-icon">
+                </landing-nav>
+              
+              <landing-title>
+                  Aatman Rangrej 
+                  <h3> Connecting dots to build solutions that make a difference </h3>
+              </landing-title>
+
+              <graph id = "landing-graph"> Main area  </graph>
                     
-                        const Graph = ForceGraph()
-                          (document.getElementById('landing-graph'))
-                            .nodeAutoColorBy('group')
-                            .linkAutoColorBy(d => gData.nodes[d.source].group)
-                            .graphData(gData);
-                      </script>
-                
+                <script>
+                  // Random tree
+                  const NODES = 500;
+                  const GROUPS = 18;
+                  const gData = {
+                    nodes: [...Array(NODES).keys()].map(i => ({
+                      id: i,
+                      group: Math.ceil(Math.random() * GROUPS)
+                    })),
+                    links: [...Array(NODES).keys()]
+                      .filter(id => id)
+                      .map(id => ({
+                        source: id,
+                        target: Math.round(Math.random() * (id-1))
+                      }))
+                  }
+
+                  const Graph = ForceGraph()
+                    (document.getElementById('landing-graph'))
+                      .nodeAutoColorBy('group')
+                      .linkAutoColorBy(d => gData.nodes[d.source].group)
+                      .graphData(gData);
+                     
+                </script>
       
             
             
