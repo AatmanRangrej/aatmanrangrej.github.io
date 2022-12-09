@@ -46,7 +46,7 @@ section {
       "landing-title  graph graph"
       "landing-title  foot foot";
     grid-template-rows: 50px 1fr 3 0px;
-    grid-template-columns: 40% 1fr;
+    grid-template-columns: 40% 20% 40%;
 
     background-color: rgb(15, 15, 15);
     width: 100%;
@@ -229,6 +229,13 @@ nav ul li a:hover {
    
       }
       
+      #nav-bar-mobile{
+        width: 10%;
+        grid-area: nav-header;
+        float: right;
+      }
+
+
       .MenuIcon {
         grid-area: nav-header;
         cursor: pointer;
