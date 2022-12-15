@@ -9,6 +9,21 @@
     --size-MenuIcon: 30px;
     --width-MenuIcon: 6px;
     --color-MenuIcon: #999;
+    --border-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 25%) 0%, 
+    hsla(0, 0%, 25%, 0) 50%
+  );
+
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+
+  --bg-gradient-jet: linear-gradient(
+    to bottom right, 
+    hsla(240, 1%, 18%, 0.251) 0%, 
+    hsla(240, 2%, 11%, 0) 100%
+  ), hsl(240, 2%, 13%);
+
+  --light-gray: hsl(0, 0%, 84%);
 }
 
 
@@ -98,6 +113,7 @@ section {
 #nav-icon {
     width: 5%;
     cursor: pointer;
+    background-color: rgb(15, 15, 15);
    
 }
 
@@ -127,8 +143,123 @@ nav ul li a:hover {
 }
 /* landing page section over */
 
-
 .wrapper section:nth-child(2) {
+
+  /* width: 90%;
+  margin: 50px auto; */
+  background-color: rgb(15, 15, 15);
+}
+
+
+.skill-row {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  background-color: rgb(15, 15, 15);
+}
+
+.skill-card {
+  width: 20%;
+  background: #17141d;
+  border: 1px solid rgb(9, 8, 8);
+  margin-top: 100px;
+  margin-bottom: 100px;
+  transition: 0.3s;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #04619F, rgb(15,15,15));
+  /* background: linear-gradient(90deg, #004e92, #000428); */
+}
+
+.skill-card-header {
+  /* text-align: center; */
+  padding: 50px 10px;
+  /* background-color: #17141d; */
+  border-radius: 10px;
+  color: white;
+  font-weight: 300;
+  left: 20px;
+  top: 15px;
+
+  /* background: linear-gradient(to right, #ff41ff, #ff4b2b); */
+  /* color: #fff; */
+}
+
+.skill-card-body {
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #e9efff;
+}
+
+
+
+.skill-card-body {
+  transform: scale(1.1);
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+.bar {
+  position: relative;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 90%;
+}
+
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.skill-card:hover .filledbar {
+  width: 100%;
+  transition: 0.4s ease-out;
+}
+
+
+.filledbar {
+  position: relative;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  transition: 0.6s ease-out;
+}
+
+
+
+/* skill card section ends */
+
+.wrapper section:nth-child(3) {
+  background-image: url(./resources/lofi_BG/lifeOFPie.svg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+  width: 100%;
+}
+
+.wrapper section:nth-child(4) {
+  background-image: url(./resources/lofi_BG/cityView.png);
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+  width: 100%;
+}
+
+
+
+
+
+
+.wrapper section:nth-child(5) {
     /* background-image: url(./resources/lofi_BG/outspace.png);
     background-repeat:no-repeat;
     background-size: cover;
@@ -203,9 +334,6 @@ input[type=radio] {
   opacity: 1;
   z-index: 1;
 }
-  img {
-    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.47);
-  }
 
 
 .player {
@@ -300,31 +428,6 @@ input[type=radio] {
 /* toolbox carousal section ends */
 
 
-.wrapper section:nth-child(3) {
-    background-image: url(./resources/lofi_BG/lifeOFPie.svg);
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-position:center;
-    width: 100%;
-}
-
-.wrapper section:nth-child(4) {
-    background-image: url(./resources/lofi_BG/cityView.png);
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-position:center;
-    width: 100%;
-}
-
-
-.wrapper section:nth-child(5) {
-    background-image: url(./resources/lofi_BG/lofi2\ \(1\).png);
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-position:center;
-    width: 100%;
-}
-
 
 
 @media only screen and (max-width: 480px) {
@@ -365,9 +468,8 @@ input[type=radio] {
       }
     
       .MenuContainer {
-        
         display: inline-block;
-        margin: 10px;
+        margin: 20px;
       }
       
       .MenuHeader {
@@ -402,12 +504,10 @@ input[type=radio] {
         position: relative;
         width: var(--size-MenuIcon);  
         z-index: 12;
-        
       }
 
       
         .MenuIcon:before {
-           
             box-shadow: var(--color-MenuIcon) 0 (var(--width-MenuIcon) * 2) 0;
             height: var(--width-MenuIcon);
             transform-origin: left top;
@@ -415,14 +515,11 @@ input[type=radio] {
         }
         
         .MenuIcon:after {
-        
           bottom: 0;
           height: var(--width-MenuIcon);
           transform-origin: left bottom;
           width: var(--size-MenuIcon);
           z-index: 14;
-          
-         
         }
       
       
@@ -480,8 +577,6 @@ input[type=radio] {
       }
       
       .Menu-item {
-        
-        
         text-align: center;
         margin-top: 20%;
         width: 250px;
@@ -504,30 +599,29 @@ input[type=radio] {
         text-decoration: none;
         z-index: 1;
       }
-        .Menu-link:before {
+      .Menu-link:before {
+      
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 100%;
+        top: 0;
+        transition: right 0.4s;
+        z-index: -1;
+      }
         
-          bottom: 0;
-          content: '';
-          left: 0;
-          position: absolute;
-          right: 100%;
-          top: 0;
-          transition: right 0.4s;
-          z-index: -1;
-        }
-        
-        .Menu-link:after {
-          content: attr(href);
-          float: right;
-          opacity: 0;
-          transition: opacity 0.8s, transform 0.4s;
-          transform: translate3d(100%, 0, 0);
-        }
+      .Menu-link:after {
+        content: attr(href);
+        float: right;
+        opacity: 0;
+        transition: opacity 0.8s, transform 0.4s;
+        transform: translate3d(100%, 0, 0);
+      }
+
       /* landing page section ends */
         
-
-
-      .card {
+      .cards {
         position: absolute;
         width: 80%;
         height: 100%;
@@ -537,5 +631,21 @@ input[type=radio] {
         transition: transform .4s ease;
         cursor: pointer;
       }
+
+      .player {
+        display: none;
+      }
+
+      .wrapper section:nth-child(2) {
+        width: 100%;
+        height: fit-content;
+      }
     
+      
+      .skill-card {
+        width: 80%;
+        
+      }
+   
+
     }
