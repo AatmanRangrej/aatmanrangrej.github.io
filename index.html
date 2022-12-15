@@ -1,233 +1,344 @@
 <!DOCTYPE html>
-    <head>
-        <meta name = "viewport" content="width = device-width, initial-scale = 1.0"/>
-        <script src="https://unpkg.com/force-graph"> </script>
-        <title> Aatman Rangrej</title>
-        
-        <!--Google Fonts-->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel = "stylesheet" /> 
-        
-        <!--Stylesheet-->
-        <link rel = "stylesheet" href = "style.css" />
-
-     </head>
+  <head>
+    <meta name = "viewport" content="width = device-width, initial-scale = 1.0"/>
+    <script src="https://unpkg.com/force-graph"> </script>
+    <title> Aatman Rangrej</title>
     
-     <body>
-        <div class = "wrapper">
-
-          <!--landing page section-->
-            <section>
-              
-              <!--mobile navigation bar-->
-              <nav-header class = "MenuContainer"> 
-                <input class="HiddenCheckbox" id="menu" type="checkbox" name="menu"/>
-                    <label class="MenuIcon" for="menu"></label>
-                    <h2 class="MenuHeader">Profile Menu</h2> <img src = "resources/landing_page/responsive-icon.png" id = "nav-bar-mobile" >
-                    <nav class="Menu">
-                      <ul class="Menu-list">
-                        <li class="Menu-item"><a class="Menu-link" href="" >About</a></li>
-                        <li class="Menu-item"><a class="Menu-link" href="" >Experience</a></li>
-                        <li class="Menu-item"><a class="Menu-link" href="">Research</a></li>
-                        <li class="Menu-item"><a class="Menu-link" href="">Education</a></li>
-                        <li class="Menu-item"><a class="Menu-link" href="">Projects</a></li>
-                      </ul>
-                    </nav>
-              </nav-header>
-              
-              <!--desktop web navigation bar-->
-              <landing-nav>  
-                    <nav>
-                      <ul>
-                        <li><a href=""> About </a></li>
-                        <li><a href=""> Experience</a> </li>
-                        <li><a href=""> Research </a></li>
-                        <li><a href=""> Education </a></li>
-                        <li><a href=""> Projects </a></li>  
-                      </ul>
-
-                    </nav>
-                    <img src = "resources/landing_page/responsive-icon.png" id = "nav-icon">
-                </landing-nav>
-              
-              <landing-title>
-                  Aatman Rangrej 
-                  <h3> Connecting dots to build solutions that make a difference </h3>
-              </landing-title>
-
-              <graph id = "landing-graph"> Connect the dots graph </graph>
-                    
-                <script>
-                  // Random tree
-                  const NODES = 500;
-                  const GROUPS = 18;
-                  const gData = {
-                    nodes: [...Array(NODES).keys()].map(i => ({
-                      id: i,
-                      group: Math.ceil(Math.random() * GROUPS)
-                    })),
-                    links: [...Array(NODES).keys()]
-                      .filter(id => id)
-                      .map(id => ({
-                        source: id,
-                        target: Math.round(Math.random() * (id-1))
-                      }))
-                  }
-
-                  const Graph = ForceGraph()
-                    (document.getElementById('landing-graph'))
-                      .nodeAutoColorBy('group')
-                      .linkAutoColorBy(d => gData.nodes[d.source].group)
-                      .graphData(gData);
-                     
-                </script>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel = "stylesheet" /> 
     
-            </section>
-            <!--landing page section-->
-            
-            
-            <section> 
-                
-              <div class="skill-row">
-                <div class="skill-card">
-                  <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
-                  </div>
-                  <div class="skill-card-header">
-                    <h1>React</h1>
-                  </div>
+    <!--Stylesheet-->
+    <link rel = "stylesheet" href = "style.css" />
 
-                  <div class="skill-card-body">
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-                      recusandae!
-                    </p>
-               
-                  </div>
-                </div>
+   
+  
+
+  </head>
+  
+<body>
+
+  
+   
+    <div class = "wrapper">
+ 
+      <!--landing page section-->
+      <section>
         
-                <div class="skill-card">
-                  <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
-                  </div>
-                  <div class="skill-card-header">
-                    <h1>Vue</h1>
-                  </div>
-                  <div class="skill-card-body">
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-                      recusandae!
-                    </p>
-            
-                  </div>
-                </div>
+        <!--mobile navigation bar-->
+        <nav-header class = "MenuContainer"> 
+          <input class="HiddenCheckbox" id="menu" type="checkbox" name="menu"/>
+              <label class="MenuIcon" for="menu"></label>
+              <h2 class="MenuHeader">Profile Menu</h2> <img src = "resources/landing_page/responsive-icon.png" id = "nav-bar-mobile" >
+              <nav class="Menu">
+                <ul class="Menu-list">
+                  <li class="Menu-item"><a class="Menu-link" href="" >About</a></li>
+                  <li class="Menu-item"><a class="Menu-link" href="" >Experience</a></li>
+                  <li class="Menu-item"><a class="Menu-link" href="">Research</a></li>
+                  <li class="Menu-item"><a class="Menu-link" href="">Education</a></li>
+                  <li class="Menu-item"><a class="Menu-link" href="">Projects</a></li>
+                </ul>
+              </nav>
+        </nav-header>
         
-                <div class="skill-card">
-                  <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
-                  </div>
-                  <div class="skill-card-header">
-                    <h1>Angular</h1>
-                  </div>
-                  <div class="skill-card-body">
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-                      recusandae!
-                    </p>
-                
-                  </div>
-                </div>
+        <!--desktop web navigation bar-->
+        <landing-nav>  
+              <nav>
+                <ul>
+                  <li><a href=""> About </a></li>
+                  <li><a href=""> Experience</a> </li>
+                  <li><a href=""> Research </a></li>
+                  <li><a href=""> Education </a></li>
+                  <li><a href=""> Projects </a></li>  
+                </ul>
+
+              </nav>
+              <img src = "resources/landing_page/responsive-icon.png" id = "nav-icon">
+          </landing-nav>
         
-                <div class="skill-card">
-                  <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
-                  </div>
-                  <div class="skill-card-header">
-                    <h1>JQuery</h1>
-                  </div>
-                  <div class="skill-card-body">
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-                      recusandae!
-                    </p>
-                   
-                  </div>
-                </div>
-              </div>
-                
+        <landing-title>
+            Aatman Rangrej 
+            <h3> Connecting dots to build solutions that make a difference </h3>
+        </landing-title>
 
-        
-
-            </section>
-
-            
-            <section> Section 3 </section>
-            <section> Section 4 </section>
-
-            <!--toolbox carousal page-->
-            <section> 
-              <div class="container">
-                <input type="radio" name="slider" id="item-1" checked>
+        <graph id = "landing-graph"> Connect the dots graph </graph>
               
+          <script>
+            // Random tree
+            const NODES = 500;
+            const GROUPS = 18;
+            const gData = {
+              nodes: [...Array(NODES).keys()].map(i => ({
+                id: i,
+                group: Math.ceil(Math.random() * GROUPS)
+              })),
+              links: [...Array(NODES).keys()]
+                .filter(id => id)
+                .map(id => ({
+                  source: id,
+                  target: Math.round(Math.random() * (id-1))
+                }))
+            }
 
-                <input type="radio" name="slider" id="item-2">
-           
+            const Graph = ForceGraph()
+              (document.getElementById('landing-graph'))
+                .nodeAutoColorBy('group')
+                .linkAutoColorBy(d => gData.nodes[d.source].group)
+                .graphData(gData);
+                
+          </script>
 
-                <input type="radio" name="slider" id="item-3">
-               
+      </section>
+      <!--landing page section-->
 
-              <div class="cards">
-                <label class="card" for="item-1" id="song-1">
-                  <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80" alt="song" class = "toolbox-card">
-                </label>
-                <label class="card" for="item-2" id="song-2">
-                  
-                  <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="song" class = "toolbox-card">
-                </label>
-                <label class="card" for="item-3" id="song-3">
-                  <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song" class = "toolbox-card">
-                </label>
-              </div>
-              <div class="player">
-                <div class="upper-part">
-                  <div class="play-icon">
-                  </div>
-                  <div class="info-area" id="test">
-                    <label class="song-info" id="song-info-1">
-                      <div class="title">Bunker</div>
-                      <div class="sub-line">
-                        <div class="subtitle">Balthazar</div>
-                        <div class="time">4.05</div>
-                      </div>
-                    </label>
-                    <label class="song-info" id="song-info-2">
-                      <div class="title">Words Remain</div>
-                      <div class="sub-line">
-                        <div class="subtitle">Moderator</div>
-                        <div class="time">4.05</div>
-                      </div>
-                    </label>
-                    <label class="song-info" id="song-info-3">
-                      <div class="title">Falling Out</div>
-                      <div class="sub-line">
-                        <div class="subtitle">Otzeki</div>
-                        <div class="time">4.05</div>
-                      </div>
-                    </label>
-                  </div>
-                </div>
-                <div class="progress-bar">
-                  <span class="progress"></span>
-                </div>
-              </div>
+      <section> 
+        
+        
+          
+        <div class="skill-row">
+          <div class="skill-card">
+            <div class="bar">
+              <div class="emptybar"></div>
+              <div class="filledbar"></div>
+            </div>
+            <div class="skill-card-header">
+              <h1>React</h1>
             </div>
 
-            </section>
+            <div class="skill-card-body">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+                recusandae!
+              </p>
+        
+            </div>
+          </div>
+  
+          <div class="skill-card">
+            <div class="bar">
+              <div class="emptybar"></div>
+              <div class="filledbar"></div>
+            </div>
+            <div class="skill-card-header">
+              <h1>Vue</h1>
+            </div>
+            <div class="skill-card-body">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+                recusandae!
+              </p>
+      
+            </div>
+          </div>
+  
+          <div class="skill-card">
+            <div class="bar">
+              <div class="emptybar"></div>
+              <div class="filledbar"></div>
+            </div>
+            <div class="skill-card-header">
+              <h1>Angular</h1>
+            </div>
+            <div class="skill-card-body">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+                recusandae!
+              </p>
+          
+            </div>
+          </div>
+  
+          <div class="skill-card">
+            <div class="bar">
+              <div class="emptybar"></div>
+              <div class="filledbar"></div>
+            </div>
+            <div class="skill-card-header">
+              <h1>JQuery</h1>
+            </div>
+            <div class="skill-card-body">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+                recusandae!
+              </p>
+            
+            </div>
+            
+          </div>
         </div>
+  
+      </section>
+
+      <!--Experience page-->
+      <section>
+    
+
+        <div class = "experience-heading"> 
+          Experience   
+        </div>
+        
+       
+          <div class="experience-row">
+          
+           
+          
+              <div class="experience-card">
+                        
+                <div class = "experience-banner">
+                  <div class = "experience-div-company"> 
+                  <div class = "experience-text-company"><h3>Birch Scientific</h3></div>
+                  <img class = "experience-roundedimg" src = "resources/birchscientific.png" alt = "birchscientific logo">
+                  </div>
+                  
+                 
+                </div>
+
+                <div class="experience-text-role"> Software Engineer</div>
+                <div class = "experience-text-date"> October 2022 - April 2023</div>
+                <div class = "experience-text-desc"><p> this is desc </p></div>
+                <div class="experience-text-details"> 
+                  <ul>
+                  <li>this is point</li>
+                  <li>this is point</li>
+                  </ul>
+                </div>
+      
+              </div>
+
+      
+              <div class="experience-card">
+
+                
+                <div class = "experience-banner">
+                  <div class = "experience-div-company"> 
+                    <div class = "experience-text-company"><h3>Visual & Analytic Lab</h3></div>
+                    <img class = "experience-roundedimg" src = "resources/logo-wl.png" alt = "Visual lab logo">
+                  </div>
+                 
+                  
+                  
+                </div>
+
+                <div class="experience-text-role"> Software Engineer</div>
+                <div class = "experience-text-date"> October 2022 - April 2023</div>
+                <div class = "experience-text-desc"><p> this is desc </p></div>
+                <div class="experience-text-details"> 
+                  <ul>
+                  <li>this is point</li>
+                  <li>this is point</li>
+                  </ul>
+                </div>
+                
+              </div>
+
+          </div>
+     
+      </section>
+      
+        
+      <!--Eduction section begins--->
+      <section>
+        
+        <div class = "education-section">
+          <h1 class = "education-heading"> Education </h1>
+          <div>
+            <div class = "university-logo"></div>
+            <div class = "university-text">
+              <h1> Memorial University </h1>
+              <h2> Bachelor of Science in Computer Science & Minor in Mathematics</h2>
+              <h2> GPA 3.72 / 4</h2>
+                <div class="bar">
+                  <div class="emptybar"></div>
+                  <div class="filledbar"></div>
+                </div>
+            </div>
+          </div>
+          
+        </div>        
+      
+        <div class = "education-section">
+          <h1 class = "education-heading"> Research </h1>
+          <div>
+            <div class = "university-logo"></div>
+            <div class = "university-text">
+            <h1> Memorial University </h1>
+            <h2> Bachelor of Science in Computer Science & Minor in Mathematics</h2>
+            <h2> GPA 3.72 / 4</h2>
+            <h2><a href="./12_CameraReady_NECEC2022.pdf" target="_blank" class = "researchPaper_link" >Viewing of Immersive Video on Extended Reality
+              Platforms</a></h2>
+              <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+              </div>
+            </div>
+          </div>
+          
+        </div>        
+      
+      
+      </section>
+
+      <!--toolbox carousal page-->
+      <section> 
+        <div class="container">
+          <input type="radio" name="slider" id="item-1" checked>
+        
+
+          <input type="radio" name="slider" id="item-2">
+      
+
+          <input type="radio" name="slider" id="item-3">
+          
+
+        <div class="cards">
+          <label class="card" for="item-1" id="song-1">
+            <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80" alt="song" class = "toolbox-card">
+          </label>
+          <label class="card" for="item-2" id="song-2">
+            
+            <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="song" class = "toolbox-card">
+          </label>
+          <label class="card" for="item-3" id="song-3">
+            <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song" class = "toolbox-card">
+          </label>
+        </div>
+        <div class="player">
+          <div class="upper-part">
+            <div class="play-icon">
+            </div>
+            <div class="info-area" id="test">
+              <label class="song-info" id="song-info-1">
+                <div class="title">Bunker</div>
+                <div class="sub-line">
+                  <div class="subtitle">Balthazar</div>
+                  <div class="time">4.05</div>
+                </div>
+              </label>
+              <label class="song-info" id="song-info-2">
+                <div class="title">Words Remain</div>
+                <div class="sub-line">
+                  <div class="subtitle">Moderator</div>
+                  <div class="time">4.05</div>
+                </div>
+              </label>
+              <label class="song-info" id="song-info-3">
+                <div class="title">Falling Out</div>
+                <div class="sub-line">
+                  <div class="subtitle">Otzeki</div>
+                  <div class="time">4.05</div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <span class="progress"></span>
+          </div>
+        </div>
+      </div>
+
+      </section>
 
 
-     </body>
+
+    </div>
+  </body>
 </html>
