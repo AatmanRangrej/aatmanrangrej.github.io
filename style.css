@@ -423,15 +423,33 @@ nav ul li a:hover {
 }
 
 .ieee-logo-left{
- 
-  float: right;
-  background-image: url(./resources/ieee.png);
+  float: right; 
+  background-image: url(./resources/ieee1.png);
   object-fit: contain;
   background-repeat: no-repeat;
   width: fit-content;
-  margin-right: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 0px;
+  width: 400px;
+  height: 65px;
+  position: relative;
+  margin-bottom: 0px;
 }
 
+.cs-society{
+  background-image: url(./resources/cs.png);
+  background-repeat: no-repeat;
+  margin-top: -20px;
+  /* margin-bottom: 30px; */
+  float: right;
+  width: 300px;
+  height: 210px;
+  margin-right: 20px;
+  position: relative;
+  
+  
+}
 
 
 .university-text h1 {
@@ -469,6 +487,8 @@ nav ul li a:hover {
 
 .blog-card {
   float: right;
+  display: flex;
+  flex-direction: column;
   position: relative;
   top: 0px;
   width: 400px;
@@ -1014,7 +1034,7 @@ input[type=radio] {
         position: relative;
         margin-top: 1rem ;
         margin-left: 25%; 
-        justify-content: space-betwee;
+        justify-content: space-between;
       }
 
       
@@ -1049,5 +1069,26 @@ input[type=radio] {
       .blog-card {
         display: none;
       }
+      
+      .ieee-logo-left{
+        scale: 0.6;
+        width: 420px;
+        height: 65px;
+        margin: 0px;
+        padding-right: 0; 
+      }
+
+      .ieee-logo{
+          width: 390px;
+          height: 70px;
+          margin: 0px;
+          padding-right: 10px; 
+        }
+      
+      .cs-society{
+        display: none;
+      }
+      
+      
       
     }
