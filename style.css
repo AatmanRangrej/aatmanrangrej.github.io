@@ -176,8 +176,8 @@ nav ul li a:hover {
 }
 
 .skill-card-header {
-  /* text-align: center; */
-  padding: 50px 10px;
+  text-align: center;
+  padding: 10px 10px;
   /* background-color: #17141d; */
   border-radius: 10px;
   color: white;
@@ -187,13 +187,39 @@ nav ul li a:hover {
 }
 
 .skill-card-body {
-  padding: 30px 20px;
+  padding: 20px 20px;
   text-align: center;
   font-size: 18px;
   color: #e9efff;
 }
 
+.skill-logos {
+  padding: auto;
+  display: inline-block;
+  padding: 10px;
+ 
+}
 
+.skill-logo-img {
+  width: 15%;
+  height: 15%;
+  vertical-align:middle;
+
+}
+
+.skill-logo-big-img{
+  width: 40%;
+ 
+  vertical-align:middle;
+  
+}
+
+.skill-logo-midSize-img{
+  width: 25%;
+  height: 25%;
+  vertical-align:middle;
+  padding: -10px;
+}
 
 .skill-card-body {
   transform: scale(1.1);
@@ -206,7 +232,8 @@ nav ul li a:hover {
 
 .bar {
   position: relative;
-  top: 100px;
+  
+  top: 105px;
   left: 20px;
   height: 5px;
   width: 90%;
@@ -382,6 +409,7 @@ nav ul li a:hover {
 .wrapper section:nth-child(4) {
   background-color: rgb(15, 15, 15);
   width: 100%;
+  height: fit-content;
 
 }
 
@@ -582,6 +610,8 @@ nav ul li a:hover {
     justify-content: center;
     font-family: 'DM Sans', sans-serif;
     overflow-x: hidden;
+   
+   
    
 }
 
