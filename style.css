@@ -154,7 +154,7 @@ nav ul li a:hover {
 
   /* width: 90%;
   margin: 50px auto; */
-  min-height: fit-content;
+  max-height: fit-content;
   background-color: rgb(15, 15, 15);
 }
 
@@ -1363,7 +1363,7 @@ input[type=radio] {
       }
       .about-text{
         padding-left: 10px;
-        padding-top: 60 %;
+        padding-top: 60%;
         position: relative;
       
         
