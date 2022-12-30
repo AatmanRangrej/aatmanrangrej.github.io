@@ -32,10 +32,10 @@
               <nav class="Menu">
                 <ul class="Menu-list">
                   <li class="Menu-item"><a class="Menu-link" href="#skills"> Skills </a></li>
-                  <li class="Menu-item"><a class="Menu-link" href="" >Experience</a></li>
-                  <li class="Menu-item"><a class="Menu-link" href="">Research</a></li>
-                  <li class="Menu-item"><a class="Menu-link" href="">Education</a></li>
-                  <li class="Menu-item"><a class="Menu-link" href="">Projects</a></li>
+                  <li class="Menu-item"><a class="Menu-link" href="#Experience" >Experience</a></li>
+                  <li class="Menu-item"><a class="Menu-link" href="#Education">Education</a></li>
+                  <li class="Menu-item"><a class="Menu-link" href="#Research">Research</a></li>
+                  <li class="Menu-item"><a class="Menu-link" href="#Projects">Projects</a></li>
                 </ul>
               </nav>
         </nav-header>
@@ -45,10 +45,10 @@
               <nav>
                 <ul>
                   <li><a href="#skills"> Skills </a></li>
-                  <li><a href=""> Experience</a> </li>
-                  <li><a href=""> Research </a></li>
-                  <li><a href=""> Education </a></li>
-                  <li><a href=""> Projects </a></li>  
+                  <li><a href="#Experience"> Experience</a> </li>
+                  <li><a href="#Education"> Education </a></li>
+                  <li><a href="#Research"> Research </a></li>
+                  <li><a href="#Projects"> Projects </a></li>  
                 </ul>
 
               </nav>
@@ -90,8 +90,47 @@
       </section>
       <!--landing page section-->
 
+
+      <section>
+        <div class = "experience-heading" id = "About"> 
+          About   
+        </div>
+
+        <div class = "about-content">
+          <div>
+          <img src = "./resources/images/profile pic_cropped.jpg" class = "about-self-img">
+          </div>
+          <p class = "about-text">I'm Aatman. I am 3rd year Computer Science major, have been involved in Research, and Enterprise projects. 
+          I am firm beliver of <i> Multi Dimensional & First Principles thinking thinking </i> , with core interest in using tech to solve problems at the intersection of Finance, Web Services, Automation, Sustainability and Virtual Reality.  
+          <br> <br> I'd pick up any skill / tech and quickly build foundational understanding of it if that helps me in efficiently creating solution of a given problem. All the skills mentioned below are the product of the problems or tasks I encountered previously. 
+          Building these skills is a continuous process and shall be adding more skills as and when faced with a challenge to build a solution.
+          </p>
+          <div class = "contact">
+            <a href = "mailto: aurangrej@mun.ca">
+            <img src = "./resources/images/email.png" class = "contact-img">
+            <p class = "contact-text">aurangrej@mun.ca</p></a>
+
+            <a href = "https://github.com/AatmanRangrej" target="_blank">
+              <img src = "./resources/images/github.png" class = "contact-img">
+              <p class = "contact-text">/AatmanRangrej</p></a>
+
+            <a href = "https://www.linkedin.com/in/aatman-rangrej/" target="_blank">
+              <img src = "./resources/images/linkedin.png" class = "contact-img">
+              <p class = "contact-text">/in/aatman-rangrej/</p></a>
+              
+          <div>  
+        </div>
+
+      </section>
+
       <section> 
-        <div class="skill-row" id = "skills">
+
+        
+        <div class = "experience-heading" id = "skills"> 
+          Skills   
+        </div>
+
+        <div class="skill-row">
           <div class="skill-card">
             <div class="bar">
               <div class="emptybar"></div>
@@ -147,7 +186,8 @@
                 <div class="experience-text-details"> 
                 <ul>
                 <li>AWS Certified Cloud Practitioner certification</li> <br> <br>
-                <li>MichiganX's Intermediate PostgreSQL certification</li>
+                <li>MichiganX's Intermediate PostgreSQL certification</li><br> <br>
+                <li>Hands on Data Structures and Algorithm techniques applied in Python, Java & C++</li>
                 </ul>
                 </div>
            
@@ -223,7 +263,7 @@
       <section>
     
 
-        <div class = "experience-heading"> 
+        <div class = "experience-heading" id = "Experience"> 
           Experience   
         </div>
         
@@ -233,15 +273,14 @@
            
           
               <div class="experience-card">
-                        
+                <a href="https://www.birchscientific.com/" target="_blank" >
                 <div class = "experience-banner">
                   <div class = "experience-div-company"> 
                   <div class = "experience-text-company"><h3>Birch Scientific</h3></div>
-                  <img class = "experience-roundedimg" src = "resources/birchscientific.png" alt = "birchscientific logo">
+                 <img class = "experience-roundedimg" src = "resources/birchscientific.png" alt = "birchscientific logo">
                   </div>
-                  
-                 
                 </div>
+                </a>
 
                 <div class="experience-text-role"> Software Engineer Intern</div>
                 <div class = "experience-text-date"> October 2022 - April 2023</div>
@@ -259,17 +298,15 @@
 
       
               <div class="experience-card">
-
+                <a href="https://www.vaclab.ca/" target="_blank" >
                 
                 <div class = "experience-banner">
                   <div class = "experience-div-company"> 
                     <div class = "experience-text-company"><h3>Visual & Analytic Lab</h3></div>
                     <img class = "experience-roundedimg" src = "resources/logo-wl.png" alt = "Visual lab logo">
                   </div>
-                 
-                  
-                  
                 </div>
+                </a>
 
                 <div class="experience-text-role"> Virtual Reality Developer</div>
                 <div class = "experience-text-date"> May 2022 - October 2022</div>
@@ -292,7 +329,7 @@
       <!--Eduction section begins--->
       <section>
         
-        <div class = "education-section">
+        <div class = "education-section" id = "Education">
           <h1 class = "education-heading"> Education </h1>
             
             <img class = "university-logo" alt = "Memorial logo" src = "./resources/mun.png">
@@ -300,7 +337,8 @@
 
               <h1> Memorial University <div class = "cs-society"> </div></h1>
               <h2> Bachelor of Science in Computer Science & Minor in Mathematics</h2>
-              <h2> GPA 3.72 / 4</h2>
+              <h2> Cummulative GPA 3.73 / 4  & Current GPA 4 / 4</h2>
+              <h2><a href="Aatman_Rangrej_MUNUnofficialTranscript.pdf" target="_blank"  class = "researchPaper_link"> Preview Transcript here</a> </h2>
               <div class="bar">
                 <div class="emptybar"></div>
                 <div class="filledbar"></div>
@@ -311,7 +349,7 @@
           
         </div>        
       
-        <div class = "education-section">
+        <div class = "education-section" id = "Research">
           
           <h1 class = "education-heading"> Research <div class = "ieee-logo-left"> </div> </h1>
           
@@ -321,57 +359,68 @@
           
           <div class="blog-card">
             
-              <img class="blog-img" src="https://user-images.githubusercontent.com/16360374/37567282-e1932872-2a81-11e8-807b-efc5a997f2f1.jpg" />
+              <img class="blog-img" src="./resources/VRimage.png">
               <div class="text-overlay">
-                <h2>Essential Atom Packages</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales posuere felis non efficitur. Mauris mollis elit urna, id tempus... &nbsp;&nbsp;<a href="./12_CameraReady_NECEC2022.pdf" target="_blank" class="read-more">Read More</a></p>
+                <h2>Viewing of Immersive Video on Extended Reality
+                  Platforms</h2>
+                <p>In this paper,
+                  we present a system to allow the display of immersive video within
+                  an extended reality (XR) environment... <a href="./12_CameraReady_NECEC2022.pdf" target="_blank" class="read-more">Read More</a></p>
               </div>
           </div>  
 
             
           <div class = "university-text">
             
-            <h1> Memorial University </h1>
-            <h2> Bachelor of Science in Computer Science & Minor in Mathematics</h2>
-            <h2> GPA 3.72 / 4</h2>
-            <h2><a href="./12_CameraReady_NECEC2022.pdf" target="_blank" class = "researchPaper_link" >Viewing of Immersive Video on Extended Reality
-              Platforms</a></h2>  
+            <a href="https://necec.ieeenl.ca/about-necec/" target="_blank">  <h1> The 31st Annual Newfoundland Electrical and Computer Engineering Conference</h1> </a>
+            <h2> Opportunity of the research work that resulted in the following research paper and was presented at NECEC 2022.</h2>
+            <h3><a href="./12_CameraReady_NECEC2022.pdf" target="_blank" class = "researchPaper_link" >Viewing of Immersive Video on Extended Reality
+              Platforms</a></h3>  
         
             <div class="bar">
               <div class="emptybar"></div>
               <div class="filledbar"></div>
+            
             </div>
           </div>
 
         </div>  
         
         <div class = "education-section">
-          <h1 class = "education-heading"> Membership </h1>
-            
+          <h1 class = "education-heading"> Membership & Events </h1>
+            <a href="https://technl.ca/" target="_blank" >
             <div class = "tech-nl"> </div>
+            </a>  
             <div class = "university-text">
+          
 
-              <h1>TechNL  <div class = "hackathon"> </div> </h1> 
-              <h2> Bachelor of Science in Computer Science & Minor in Mathematics</h2>
-              <h2> GPA 3.72 / 4</h2>
+              <h1>TechNL student member and TechNL's hackathon event  <div class = "hackathon"> </div> </h1> 
+              <h3> Pitched a platfrom to match experience seekers and Startups, establishing meaningful symbiotic relationships</h3>
+              <h3> Opportunity to personally interact with many industry vetrans to broaden the horizon of knowledge.</h3>
               <div class="bar">
                 <div class="emptybar"></div>
                 <div class="filledbar"></div>
               </div>
-            
+              
             </div>
-         
-          
+            
+            
         </div>        
-
+        
+      
         
       
       
       </section>
-
+      
       <!--toolbox carousal page-->
       <section> 
-        <div class="container">
+        
+
+        <div class="container" id = "Projects">
+          <div class = "title-project"> 
+           Projects
+          </div>
           <input type="radio" name="slider" id="item-1" checked>
         
 
@@ -386,8 +435,29 @@
           
 
         <div class="cards">
-          <label class="card" for="item-1" id="song-1">
-            <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80" alt="song" class = "toolbox-card">
+          <label class="card video-bg" for="item-1" id="song-1">
+            <div class = "video-card">              
+              <div class = "horizontal-scroll-wrapper">
+              
+                <div class = "graph-images"> 
+                  <video controls autoplay loop width="100%" height="100%">
+                  
+                    <source src="./resources/video/Life.mp4"
+                            type="video/mp4">
+                  
+                  </video>
+
+                  <p>This is the knowledge graph of "Life" article, this graph shows the relationships of "Life" article
+                    with other articles. It is a facinating to comprehend how biology, Aristotle's philosophy of life and the Big Bang are all
+                    interconnected. This is a web of knowledge to help us in emberace the importance of the mutli dimensionality of chain of
+                    thought process. 
+                  </p>
+                </div>
+                
+          
+              </div>
+            </div>
+         
           </label>
 
           <label class="card video-bg" for="item-2" id="song-2">
@@ -433,7 +503,7 @@
           <label class="card video-bg"  for="item-5" id="song-5">
             
             <div class = "video-card">
-              <video controls autoplay loop width="100%" height="100%">
+              <video controls loop width="100%" height="100%">
                 
                 <source src="./resources/video/KingdominoGroup7V1 (1).mp4#t=40"
                         type="video/mp4">
@@ -443,33 +513,43 @@
             
           </label>
 
-
-
         </div>
+
         <div class="player">
           <div class="upper-part">
-            <div class="play-icon">
-            </div>
             <div class="info-area" id="test">
               <label class="song-info" id="song-info-1">
-                <div class="title">Bunker</div>
+                <div class="title"><b>Knowledge graph of Wikipedia Articles</b></div>
                 <div class="sub-line">
-                  <div class="subtitle">Balthazar</div>
-                  <div class="time">4.05</div>
+                  <div class="subtitle">uses Wikipedia API and Obsidian</div>
+                  <!-- <div class="time">4.05</div> -->
                 </div>
               </label>
               <label class="song-info" id="song-info-2">
-                <div class="title">Words Remain</div>
+                <div class="title"><b>PinoTiles bot</b></div>
                 <div class="sub-line">
-                  <div class="subtitle">Moderator</div>
-                  <div class="time">4.05</div>
+                  <div class="subtitle">Python bot to play Piano Tiles game</div>
                 </div>
               </label>
               <label class="song-info" id="song-info-3">
-                <div class="title">Falling Out</div>
+                <div class="title"><b>Pre-processing of Salary Dataset using ML</b></div>
                 <div class="sub-line">
-                  <div class="subtitle">Otzeki</div>
-                  <div class="time">4.05</div>
+                  <div class="subtitle">Academic Project</div>
+                  <div class="subtitle">Data Analytics</div>
+                </div>
+              </label>
+              <label class="song-info" id="song-info-4">
+                <div class="title"><b> Cricket Game</b></div>
+                <div class="sub-line">
+                  <div class="subtitle">Passion Project </div>
+                  <div class="subtitle">Programmed in Python</div>
+                </div>
+              </label>
+              <label class="song-info" id="song-info-5">
+                <div class="title"><b>King Domino Game</b></div>
+                <div class="sub-line">
+                  <div class="subtitle">Academic Project</div>
+                  <div class="subtitle">Programmed in Java</div>  
                 </div>
               </label>
             </div>
@@ -477,13 +557,19 @@
           <div class="progress-bar">
             <span class="progress"></span>
           </div>
-        </div>
-      </div>
 
+
+
+        </div>
+
+
+      </div>
+     
       </section>
 
 
-
+      <div class = "footer">Proudly built from scratch | Aatman Rangrej</div>
     </div>
+    
   </body>
 </html>

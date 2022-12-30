@@ -39,6 +39,7 @@
     overflow-y: auto;
     scroll-snap-type: y proximity;
     display: grid;
+    overscroll-behavior: contain;
 
 }
 
@@ -153,6 +154,55 @@ nav ul li a:hover {
 
   /* width: 90%;
   margin: 50px auto; */
+  min-height: fit-content;
+  background-color: rgb(15, 15, 15);
+}
+
+.about-self-img{
+  border-radius: 50%;
+  object-fit: cover;
+  float: left;
+  width: 200px;
+  height:200px;
+  margin-left: 150px;
+  margin-top: 10px;
+}
+
+.about-text{
+  align-content: center;
+  color:hsl(0, 0%, 84%);
+  font-size: 23px;
+  padding-left: 25%;
+  padding-right: 5%;
+  font-weight: 300;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  
+
+}
+.contact-text{
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+}
+.contact-img{
+  max-width: 30px;
+  max-height: 30px;
+  vertical-align: middle;
+  padding-left: 10px;
+
+}
+/* about section ends */
+.wrapper section:nth-child(3) {
+
+  /* width: 90%;
+  margin: 50px auto; */
   background-color: rgb(15, 15, 15);
 }
 
@@ -167,7 +217,7 @@ nav ul li a:hover {
 .skill-card {
   width: 20%;
   background: #17141d;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 100px;
   transition: 0.3s;
   border-radius: 10px;
@@ -269,8 +319,10 @@ nav ul li a:hover {
 
 
 /* Experience section begins */
-.wrapper section:nth-child(3) {
+.wrapper section:nth-child(4) {
   background-color: rgb(15, 15, 15);
+  min-height: 110vh;
+
   /* width: 100%; */
 }
 
@@ -281,6 +333,7 @@ nav ul li a:hover {
   background-color: rgb(15, 15, 15);
   top: 20px;
   column-gap: 20px;
+  max-height: fit-content;
 }
 
 .experience-card {
@@ -292,7 +345,7 @@ nav ul li a:hover {
   background: rgb(15, 15, 15);
   border: 1px solid rgb(132, 132, 132);
   /* background: linear-gradient(90deg, #004e92, #000428); */
-  min-height: 90%;
+  min-height: fit-content;
   max-height: fit-content;
 }
 
@@ -309,6 +362,7 @@ nav ul li a:hover {
   text-align: center;
   margin-top: 10px;
   padding-top: 0%;
+  margin-bottom: 0px;
 
 
 } 
@@ -418,7 +472,7 @@ nav ul li a:hover {
 
 /* Education section Begins */
 
-.wrapper section:nth-child(4) {
+.wrapper section:nth-child(5) {
   background-color: rgb(15, 15, 15);
   width: 100%;
   height: fit-content;
@@ -509,7 +563,7 @@ nav ul li a:hover {
   background-image: url(./resources/toolbox/TechFWD-Gprahics-2.png);
   background-repeat: no-repeat;
   background-size: contain;
-  margin-top: -100px;
+  margin-top: -125px;
   /* margin-bottom: 30px; */
   float: right;
   width: 400px;
@@ -529,11 +583,17 @@ nav ul li a:hover {
 
 
 .university-text h2 {
-  margin-top: 20px;
+  margin-top: 24px;
   color: #fff;
   padding-left: 220px;
   position: relative;
   
+}
+.university-text h3 {
+  margin-top: 20px;
+  color: #fff;
+  padding-left: 220px;
+  position: relative;
 }
 
 .university-text:hover .filledbar {
@@ -614,7 +674,8 @@ nav ul li a:hover {
   color: #555;
   width: 380px;
   height: 38px;
-  margin: 8px 0;
+  
+  margin-top: 2px;
   line-height: 1.25;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -634,7 +695,7 @@ nav ul li a:hover {
 
 /* Education section Ends */
 
-.wrapper section:nth-child(5) {
+.wrapper section:nth-child(6) {
     /* background-image: url(./resources/lofi_BG/outspace.png);
     background-repeat:no-repeat;
     background-size: cover;
@@ -645,7 +706,8 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     font-family: 'DM Sans', sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
+    
    
    
    
@@ -671,20 +733,21 @@ input[type=radio] {
 .container {
   width: 100%;
   max-width: 800px;
-  height: 100%;
+  height: 70%;
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
 }
 
 .cards {
   position: relative;
   width: 100%;
   height: 100%;
-  margin-bottom: 150px;
-  margin-top: 100px;
+  padding-bottom: 150px;
+  padding-top: 100px;
   
 }
 
@@ -698,7 +761,6 @@ input[type=radio] {
 .video-bg{
   background-color: #4158D0;
   background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-
   }
 
 
@@ -747,53 +809,65 @@ input[type=radio] {
 .player {
   background-color: #fff;
   border-radius: 8px;
-  min-width: 320px;
-  position: relative;
-  padding: 16px 10px;
+  min-width: 390px;
+  /* min-height: 100px; */
+  position: absolute;
+  padding: 2px 10px;
+  margin-bottom: 150px;
+  
 }
 
 .upper-part {
   position: relative;
   display: flex;
-  align-items: center;
-  margin-bottom: 12px;
+  align-items: left;
+  margin-bottom: 0px;
   height: 36px;
   overflow: hidden;
+  margin-left: 0px;
 }
 
 
-.play-icon{ margin-right: 10px; }
+
 
 .song-info {
   width: calc(100% - 32px);
   display: block;
+  margin-left: 0px;
  
 }
 
 .song-info .title {
   color: #403d40;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
+  padding-top: 0%;
+  float: left;
+  
 }
 
 .sub-line {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  float: left;
+ 
+  /* margin-top: 0; */
 }
 
 .subtitle, .time {
-  font-size: 12px;
-  line-height: 16px;
-  color: #c6c5c6;
+  font-size: 13px;
+  line-height:16px;
+  color: #464646;
+  font-weight: 500;
 }
 
 .time {
   font-size: 12px;
-  line-height: 16px;
+  line-height: 6px;
   color: #a5a5a5;
   font-weight: 500;
-  margin-left: auto;
+  float: right;
 }
 
 .progress-bar {
@@ -802,6 +876,7 @@ input[type=radio] {
   background-color: #e9efff;
   border-radius: 2px;
   overflow: hidden;
+  margin-top: 6px;
 }
 
 .progress {
@@ -817,7 +892,9 @@ input[type=radio] {
   width: 100%;
   position: absolute;
   top: 0;
-  left: 30px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
   transition: transform .4s ease-in;
 }
 
@@ -833,12 +910,60 @@ input[type=radio] {
   transform: translateY(-80px);
 }
 
+#item-4:checked ~ .player #test  {
+  transform: translateY(-120px);
+}
+
+#item-5:checked ~ .player #test  {
+  transform: translateY(-160px);
+}
+
+.title-project{
+  margin-top: 35px;
+  align-items: center;
+  font-size: 46px;
+  margin-bottom: 0px;
+  color: white;
+  font-weight: 400;
+  font-family: serif;
+}
+/* image-slider on first label  */
 
 
+.horizontal-scroll-wrapper {
+  overflow: hidden;
+  white-space: wrap;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/* .horizontal-scroll-wrapper:hover {
+  overflow-y: scroll;
+} */
+
+
+.graph-images{
+  padding-top: 0;
+  width: 100%;
+  height: 80%;
+  /* margin-right: 10px; */
+  /* margin: 10px 0; */
+  /* background-color: #378aee; */
+  /* display: inline-block; */
+  
+}
 
 /* toolbox carousal section ends */
 
-
+.footer {
+  text-align: center;
+  background-color: rgb(15, 15, 15);
+  color:hsl(0, 0%, 84%);
+  font-size: 24px;
+  font-weight: 900;
+  padding-bottom: 10px;
+}
 
 
 @media only screen and (max-width: 480px) {
@@ -1046,12 +1171,12 @@ input[type=radio] {
         transition: transform .4s ease;
         cursor: pointer;
       }
-
+/* 
       .player {
         display: none;
-      }
+      } */
 
-      .wrapper section:nth-child(2) {
+      .wrapper section:nth-child(3) {
         width: 100%;
         height: fit-content;
       }
@@ -1063,7 +1188,7 @@ input[type=radio] {
         
       }
 
-      .wrapper section:nth-child(3) {
+      .wrapper section:nth-child(4) {
         width: 100%;
         height: fit-content;
       }
@@ -1119,7 +1244,7 @@ input[type=radio] {
 
       /* Education */
 
-      .wrapper section:nth-child(4) {
+      .wrapper section:nth-child(5) {
           width: 100%;
           height: fit-content;
           display: flex;
@@ -1181,6 +1306,19 @@ input[type=radio] {
         text-align: center;
       }
 
+      .university-text h3 {
+        margin-top: 20px;
+        color: #fff;
+        /* padding-left: 15%; */
+        width: 90%;
+        padding-left: 20px;
+        /* padding-right: 20%; */
+        position: relative;
+        font-weight: 300;
+        font-size: 1.5vh;
+        text-align: center;
+      }
+      
       .blog-card {
         display: none;
       }
@@ -1204,6 +1342,44 @@ input[type=radio] {
         display: none;
       }
       
+      .player{
+        display: flow-root;
+        margin-bottom: 100px;
+      }
+      .footer {
+        text-align: center;
+        background-color: rgb(15, 15, 15);
+        color:hsl(0, 0%, 84%);
+        font-size: 14px;
+        font-weight: 900;
+        padding-bottom: 10px;
+      }
+
+      .contact-img{
+        position: relative;
+        margin-top: 1rem ;
+        margin-left: 25%; 
+        justify-content: space-between;
+      }
+      .about-text{
+        padding-left: 10px;
+        padding-top: 60 %;
+        position: relative;
       
-      
+        
+      }
+
+      .about-self-img{
+        position: relative;
+        margin-top: 1rem ;
+        margin-left: 25%; 
+        justify-content: space-between;
+        padding-bottom: 5px;
+        
+      }
+      .contact{
+       display: flexbox;
+       flex-direction: column;
+      }
+    
     }
